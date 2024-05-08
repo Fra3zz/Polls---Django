@@ -1,0 +1,15 @@
+{% extends "autos/base_bootstrap.html" %}
+
+{% block content %}
+
+<h1>Delete Make</h1>
+
+<p>Are you sure you want to delete the make: {{ make }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" value="Yes, delete." class="btn btn-danger">
+  <a href="{% url 'autos:all' %}" class="btn btn-secondary">Cancel</a>
+</form>
+
+{% endblock %}
