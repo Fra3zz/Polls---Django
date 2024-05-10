@@ -25,11 +25,11 @@ SECRET_KEY = 'django-insecure-_7(&ss%qe)!t5l*7hes74yut9_w9sf)*!s6kd#+wpwx8y&bq0)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://django.sdtechlab.com']
+ALLOWED_HOSTS = ['django.sdtechlab.com']
 
 # settings.py
 
-CSRF_TRUSTED_ORIGINS = ['django.sdtechlab.com']
+CSRF_TRUSTED_ORIGINS = ['https://django.sdtechlab.com']
 
 
 # Application definition
