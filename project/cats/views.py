@@ -1,44 +1,45 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin  # Import the LoginRequiredMixin
 from .models import Cat, Breed
 
-class CatList(ListView):
+class CatList(LoginRequiredMixin, ListView):  # Apply LoginRequiredMixin to restrict access
     model = Cat
     template_name = 'cats/cat_list.html'
 
-class CatCreate(CreateView):
+class CatCreate(LoginRequiredMixin, CreateView):  # Apply LoginRequiredMixin to restrict access
     model = Cat
     fields = ['nickname', 'weight', 'foods', 'breed']
     template_name = 'cats/cat_form.html'
     success_url = reverse_lazy('cats:all')
 
-class CatUpdate(UpdateView):
+class CatUpdate(LoginRequiredMixin, UpdateView):  # Apply LoginRequiredMixin to restrict access
     model = Cat
     fields = ['nickname', 'weight', 'foods', 'breed']
     template_name = 'cats/cat_form.html'
     success_url = reverse_lazy('cats:all')
 
-class CatDelete(DeleteView):
+class CatDelete(LoginRequiredMixin, DeleteView):  # Apply LoginRequiredMixin to restrict access
     model = Cat
     success_url = reverse_lazy('cats:all')
 
-class BreedList(ListView):
+class BreedList(LoginRequiredMixin, ListView):  # Apply LoginRequiredMixin to restrict access
     model = Breed
     template_name = 'cats/breed_list.html'
 
-class BreedCreate(CreateView):
+class BreedCreate(LoginRequiredMixin, CreateView):  # Apply LoginRequiredMixin to restrict access
     model = Breed
     fields = ['name']
     template_name = 'cats/breed_form.html'
     success_url = reverse_lazy('cats:all')
 
-class BreedUpdate(UpdateView):
+class BreedUpdate(LoginRequiredMixin, UpdateView):  # Apply LoginRequiredMixin to restrict access
     model = Breed
     fields = ['name']
     template_name = 'cats/breed_form.html'
     success_url = reverse_lazy('cats:all')
 
-class BreedDelete(DeleteView):
+class BreedDelete(LoginRequiredMixin, DeleteView):  # Apply LoginRequiredMixin to restrict access
     model = Breed
     success_url = reverse_lazy('cats:all')
