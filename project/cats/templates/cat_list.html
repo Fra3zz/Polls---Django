@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat List</title>
+</head>
+<body>
+    <h1>Cat List</h1>
+    <ul>
+        {% for cat in object_list %}
+            <li>{{ cat.nickname }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
