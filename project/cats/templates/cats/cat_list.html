@@ -8,8 +8,10 @@
     <title>Cat List</title>
 </head>
 <body>
-    <a href="/cats/breeds/create/">Add a breed</a>
     <h1>Cat List</h1>
+    <br>
+    <a href="/cats/breeds/create/">Add a breed</a>
+    <br>
     <ul>
         {% for cat in object_list %}
             <li>{{ cat.nickname }}</li>
