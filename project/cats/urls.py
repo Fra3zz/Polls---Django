@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from cats import views
+#from cats import views
 
 
 app_name = 'cats'
