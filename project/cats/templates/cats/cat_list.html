@@ -15,6 +15,7 @@
     <a href="{% url 'cats:breed_list' %}">View breeds</a>
     <a href="{% url 'cats:cat_create' %}">Add a cat</a>
     <br>
+    <a href="{{% url 'cats:cat_update' %}}"></a>
     <ul>
         {% for cat in object_list %}
             <li>{{ cat.nickname }}</li>
