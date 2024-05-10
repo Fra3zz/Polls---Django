@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['django.sdtechlab.com']
 
+# settings.py
+
+CSRF_TRUSTED_ORIGINS = ['django.sdtechlab.com']
+
 
 # Application definition
 
